@@ -1,6 +1,5 @@
 # Ignore virtual environments
-venv/
-venv39/
+.venv/
 .env
 map.html
 __pycache__/*

@@ -1,3 +1,9 @@
+Show me new construction activity in open areas within 15 km south of Beirut
+Show construction changes within 10 km from the border of Israel in the last five months
+Find open areas that have been developed or converted into new built-up areas in the northern part of Tripoli
+Identify changes in the road network extending east from Tyre center
+Find new buildings or facilities developed in undeveloped areas within 15 miles north from the northern point of Israel border
+
 What new residential areas have appeared in Tel Aviv in the last detection?
 How has land use changed in Eilat over the last two detections?
 What are the largest industrial areas in Be'er Sheva?
