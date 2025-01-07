@@ -1,0 +1,12 @@
+# Ignore virtual environments
+venv/
+venv39/
+.env
+map.html
+__pycache__/*
+models/__pycache__/*
+utils/__pycache__/*
+.idea/
+*/__pycache__/
+data/
+.gradio/
