@@ -48,7 +48,7 @@ def chat_ui():
                 output = gr.HTML(label="Map Visualization")
                 visualize_btn.click(fn=visualize, outputs=output, api_name="Map")
 
-    iface.launch(server_name='0.0.0.0', server_port=7866)
+    iface.launch(server_name='0.0.0.0', server_port=7867)
 
 
 if __name__ == "__main__":

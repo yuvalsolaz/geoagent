@@ -4,25 +4,24 @@ Find open areas that have been developed or converted into new built-up areas in
 Identify changes in the road network extending east from Tyre center
 Find new buildings or facilities developed in undeveloped areas within 15 miles north from the northern point of Israel border
 
-What new residential areas have appeared in Tel Aviv in the last detection?
-How has land use changed in Eilat over the last two detections?
-What are the largest industrial areas in Be'er Sheva?
-Are there new construction starts in Haifa?
-What highways are within 50 km of Haifa?
-What new residential areas have appeared within 10 km of Tel Aviv in the last detection?
-Give me all new roads in distance of at least 5 km from Nesher but no more than 10 km
-Give me all roads in distance of at least 5 km from Nesher but no more than 10 km
-Give me all the new airports in Haifa and Tel Aviv
-Give me polygons where there are 2 adjacent polygons of road in Haifa.
-Give me all areas that haven't changed over time in Haifa.
-Give me all areas that haven't changed in the last half year in Haifa.
-Give me all areas that changed in Raanana in the last 10 months
-What highways are there in Haifa and Tel Aviv?
-Give me all the airports
-What airports are there in the northern part of tel aviv ?
-What airports are there east to tel aviv ?
-What are the largest industrial areas in the eastern part of Be'er Sheva ?
-What new residential are there in the east part of jerusalem ?
-Which roads are there in radius of 5 kilometers south to tel aviv ?
-which industrial areas in distance of 7 kilometers from center of Be'er Sheva ?
-give me all airports 8 kilometers north east to tel aviv ?
+What new residential areas have appeared in Tripoli in the last 5 months ?
+How has land use changed in Tyre over the last year
+What are the 5 largest industrial areas in Sidon ?
+Are there new construction starts in Beirut ?
+What highways are within 50 km of Tyre ?
+What new residential areas have appeared within 10 km from the center of Beirut in the last 6 and a half months ?
+Give me all new roads in distance of at least 5 km from Tyre but no more than 10 km
+Give me all roads in distance of at least 5 km from Tyre but no more than 10 km
+Give me all the new airports in Tyre and Sidon
+Give me polygons where there are 2 adjacent polygons of road in Lebanon.
+Give me all areas that haven't changed in the last half year in Beirut.
+Give me all areas that changed in Sidon in the last 10 months.
+What highways are there in Tripoli and Beirut ?
+Give me all the airports.
+What airports are there in the southern part of Beirut ?
+What airports are there east to Tyre ?
+What are the largest industrial areas in the eastern part of Tripoli ?
+What new residential are there in the east part of Sidon ?
+Which roads are there in radius of 5 kilometers south to Beirut ?
+which industrial areas in distance of 7 kilometers from center of Tripoli ?
+give me all airports 8 kilometers north east to the  center of Beirut ?
