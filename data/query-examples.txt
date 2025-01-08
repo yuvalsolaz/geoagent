@@ -4,7 +4,7 @@ Find open areas that have been developed or converted into new built-up areas in
 Identify changes in the road network extending east from Tyre center
 Find new buildings or facilities developed in undeveloped areas within 15 miles north of Israel border
 
-What new residential areas have appeared in Tripoli in the last 5 months ?
+What new residential areas have appeared in Tripoli in the last 10 months ?
 How has land use changed in Tyre over the last year
 What are the 5 largest industrial areas in Sidon ?
 Are there new construction starts in Beirut ?
@@ -25,3 +25,10 @@ What new residential are there in the east part of Sidon ?
 Which roads are there in radius of 5 kilometers south to Beirut ?
 which industrial areas in distance of 7 kilometers from center of Tripoli ?
 give me all airports 8 kilometers north east to the  center of Beirut ?
+
+##   chat example:
+    roads within 10 km from the center of beirut city
+    show the first 3 results and the distance in km for each detection
+
+    roads within one and a half km from Syria border
+    same also for airports
