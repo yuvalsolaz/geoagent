@@ -36,3 +36,4 @@ give me all airports 8 kilometers north east to the  center of Beirut ?
 # hebrew chat queries:
     דרכים שמונה קמ צפונית לצור
     יש גם שדות תעופה שם
+    תביא רק את אלה שבשטחים פתוחים
