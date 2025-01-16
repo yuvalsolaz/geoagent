@@ -1,4 +1,5 @@
 import folium
+from folium import plugins
 import geopandas as gpd
 from shapely.geometry import Point, shape
 from shapely.ops import unary_union
@@ -6,13 +7,56 @@ from utils.geo_state_manager import GeoStateManager
 
 geo_state = GeoStateManager()
 
+basemaps = {
+    'Google Maps': folium.TileLayer(
+        tiles='https://mt1.google.com/vt/lyrs=m&x={x}&y={y}&z={z}',
+        attr='Google',
+        name='Google Maps',
+        overlay=True,
+        control=True
+    ),
+    'Google Satellite': folium.TileLayer(
+        tiles='https://mt1.google.com/vt/lyrs=s&x={x}&y={y}&z={z}',
+        attr='Google',
+        name='Google Satellite',
+        overlay=True,
+        control=True
+    ),
+    'Google Terrain': folium.TileLayer(
+        tiles='https://mt1.google.com/vt/lyrs=p&x={x}&y={y}&z={z}',
+        attr='Google',
+        name='Google Terrain',
+        overlay=True,
+        control=True
+    ),
+    'Google Satellite Hybrid': folium.TileLayer(
+        tiles='https://mt1.google.com/vt/lyrs=y&x={x}&y={y}&z={z}',
+        attr='Google',
+        name='Google Satellite',
+        overlay=True,
+        control=True
+    ),
+    'Esri Satellite': folium.TileLayer(
+        tiles='https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',
+        attr='Esri',
+        name='Esri Satellite',
+        overlay=True,
+        control=True
+    )
+}
 
 def create_map():
     # Create a folium map
     bounds = geo_state.get_boundaries()
     center_lat = (bounds[1] + bounds[3]) / 2
     center_lon = (bounds[0] + bounds[2]) / 2
-    m = folium.Map(location=[center_lat, center_lon], zoom_start=10)
+
+    # Create a folium map object.
+    m = folium.Map(location=[center_lat, center_lon], zoom_start=10, height=500)
+
+    # Add custom basemaps
+    for basemap in basemaps.values():
+        basemap.add_to(m)
 
     # Add query locations polygons to the map:
     for key in geo_state.global_geometries:
@@ -71,4 +115,7 @@ def create_map():
 
     # Fit the map to the bounds of the geometries
     m.fit_bounds([[bounds[1], bounds[0]], [bounds[3], bounds[2]]])
+    # Add a layer control panel to the map.
+
+    m.add_child(folium.LayerControl())
     return m
