@@ -15,13 +15,13 @@ basemaps = {
         overlay=True,
         control=True
     ),
-    'Google Satellite': folium.TileLayer(
-        tiles='https://mt1.google.com/vt/lyrs=s&x={x}&y={y}&z={z}',
-        attr='Google',
-        name='Google Satellite',
-        overlay=True,
-        control=True
-    ),
+    # 'Google Satellite': folium.TileLayer(
+    #     tiles='https://mt1.google.com/vt/lyrs=s&x={x}&y={y}&z={z}',
+    #     attr='Google',
+    #     name='Google Satellite',
+    #     overlay=True,
+    #     control=True
+    # ),
     'Google Terrain': folium.TileLayer(
         tiles='https://mt1.google.com/vt/lyrs=p&x={x}&y={y}&z={z}',
         attr='Google',
@@ -35,14 +35,14 @@ basemaps = {
         name='Google Satellite',
         overlay=True,
         control=True
-    ),
-    'Esri Satellite': folium.TileLayer(
-        tiles='https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',
-        attr='Esri',
-        name='Esri Satellite',
-        overlay=True,
-        control=True
     )
+    # 'Esri Satellite': folium.TileLayer(
+    #     tiles='https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',
+    #     attr='Esri',
+    #     name='Esri Satellite',
+    #     overlay=True,
+    #     control=True
+    # )
 }
 
 def create_map():
