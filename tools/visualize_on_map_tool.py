@@ -26,6 +26,7 @@ basemaps = {
         tiles='https://mt1.google.com/vt/lyrs=p&x={x}&y={y}&z={z}',
         attr='Google',
         name='Google Terrain',
+        show=False,
         overlay=True,
         control=True
     ),
@@ -33,6 +34,7 @@ basemaps = {
         tiles='https://mt1.google.com/vt/lyrs=y&x={x}&y={y}&z={z}',
         attr='Google',
         name='Google Satellite',
+        show=False,
         overlay=True,
         control=True
     )
