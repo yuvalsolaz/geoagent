@@ -6,7 +6,7 @@ contextily
 pyproj
 numpy
 pandas
-langchain==0.3.9
+langchain
 sqlalchemy
 psycopg2-binary
 tabulate
