@@ -1,10 +1,10 @@
 import gradio as gr
+import sys
 from models.geo_agent import GeoAgent
 from tools.visualize_on_map_tool import create_map
 from utils.geo_state_manager import GeoStateManager
 
 geo_state = GeoStateManager()
-
 
 def chat_ui():
     agent = GeoAgent()
@@ -17,12 +17,16 @@ def chat_ui():
 
     def visualize():
         m = create_map()
-        return m._repr_html_()
-
+        map_html = m._repr_html_()
+        map_html = map_html.replace("position:relative;width:100%;height:0;padding-bottom:60%;",
+                                    "position:relative;width:100%;height:0;padding-bottom:100%;", 1)
+        map_html = map_html.replace("height: 500.0px;",
+                                    "height: 800.0px;",1)
+        return map_html
     with gr.Blocks() as iface:
         with gr.Row():
             with gr.Column(scale=1, min_width=300):
-                chatbot = gr.Chatbot(height=570)
+                chatbot = gr.Chatbot(height=800, type="messages")
 
                 def handle_clear():
                     geo_state.reset()
@@ -48,7 +52,10 @@ def chat_ui():
                 output = gr.HTML(label="Map Visualization")
                 visualize_btn.click(fn=visualize, outputs=output, api_name="Map")
 
-    iface.launch(server_name='0.0.0.0', server_port=7867)
+    if len(sys.argv) == 1:
+        iface.launch(server_name='0.0.0.0', server_port=7867)
+    else:
+        iface.launch(share=True)
 
 
 if __name__ == "__main__":
