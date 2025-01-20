@@ -6,7 +6,6 @@ from utils.geo_state_manager import GeoStateManager
 
 geo_state = GeoStateManager()
 
-
 def chat_ui():
     agent = GeoAgent()
 
@@ -18,18 +17,16 @@ def chat_ui():
 
     def visualize():
         m = create_map()
-
         map_html = m._repr_html_()
         map_html = map_html.replace("position:relative;width:100%;height:0;padding-bottom:60%;",
                                     "position:relative;width:100%;height:0;padding-bottom:100%;", 1)
         map_html = map_html.replace("height: 500.0px;",
-                                    "height: 900.0px;",1)
+                                    "height: 800.0px;",1)
         return map_html
-
     with gr.Blocks() as iface:
         with gr.Row():
             with gr.Column(scale=1, min_width=300):
-                chatbot = gr.Chatbot(height=900, type="messages")
+                chatbot = gr.Chatbot(height=800, type="messages")
 
                 def handle_clear():
                     geo_state.reset()
