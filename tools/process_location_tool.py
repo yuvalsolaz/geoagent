@@ -41,7 +41,35 @@ def geocode_bodrer(query):
         logger.error(f"Error in geocoding: {str(e)}")
         return []
 
+'''
+zoom	address detail
+3	country
+5	state
+8	county
+10	city
+12	town / borough
+13	village / suburb
+14	neighbourhood
+15	any settlement
+16	major streets
+17	major and minor streets
+18 building 
+'''
 
+def reverse_geocoding(query):
+    geolocator = Nominatim(user_agent="your-application-name")
+    try:
+        location_names = geolocator.reverse( query=query, exactly_one=True, addressdetails=False, zoom=17, language='en'
+        , timeout=10)
+        if not location_names:
+            return []
+
+        print(f"locations: {location_names}")
+        return  location_names
+
+    except Exception as e:
+        logger.error(f"Error in reverse geocoding: {str(e)}")
+        return []
 
 def process_location_query(location_input: str) -> dict:
     try:
