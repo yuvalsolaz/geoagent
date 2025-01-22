@@ -1,4 +1,5 @@
 from geopy.geocoders import Nominatim
+import geopy
 from shapely.geometry import Point, shape
 from psycopg2 import connect, Error
 import geopandas as gpd
@@ -41,25 +42,29 @@ def geocode_bodrer(query):
         logger.error(f"Error in geocoding: {str(e)}")
         return []
 
-'''
-zoom	address detail
-3	country
-5	state
-8	county
-10	city
-12	town / borough
-13	village / suburb
-14	neighbourhood
-15	any settlement
-16	major streets
-17	major and minor streets
-18 building 
-'''
-
 def reverse_geocoding(query):
+
+    '''
+    zoom	address detail
+    ---------------------------
+    3	country
+    5	state
+    8	county
+    10	city
+    12	town / borough
+    13	village / suburb
+    14	neighbourhood
+    15	any settlement
+    16	major streets
+    17	major and minor streets
+    18 building
+    '''
+
     geolocator = Nominatim(user_agent="your-application-name")
     try:
-        location_names = geolocator.reverse( query=query, exactly_one=True, addressdetails=False, zoom=17, language='en'
+        p = geopy.point.Point(clean_text(query))
+        point = geopy.point.Point(p.longitude, p.latitude)
+        location_names = geolocator.reverse(point, exactly_one=True, addressdetails=False, zoom=17, language='en'
         , timeout=10)
         if not location_names:
             return []
