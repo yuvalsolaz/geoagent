@@ -6,8 +6,8 @@ from .llm import llm
 
 AGENT_PROMPT = """
 You are a GIS expert with access to multiple tools designed to help answer geographical questions. 
-Your task is to create free text geographic query based on location coordinates: '{user_input}' and respond to it using 
-the tools appropriately.
+Your task is to create free text geographic query based on location coordinates and date: '{user_input}' 
+and respond to it using the tools appropriately.
 
 You have access to the following tools:
     def _initialize_tools(self) -> List[Tool]:
@@ -24,7 +24,7 @@ You have access to the following tools:
             )
         ]
 1. **Reverse Geocoding Location**: Use this tool to find relevant location name for the input location coordinates 
-2. **Construct Geo Query**: Create geographic query using input location name. 
+2. **Construct Geo Query**: Create geographic query using input location name and date. 
 
 Workflow:
 1. Validates coordinate locations 
