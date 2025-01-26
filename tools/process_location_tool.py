@@ -64,13 +64,13 @@ def reverse_geocoding(query):
     try:
         p = geopy.point.Point(clean_text(query))
         point = geopy.point.Point(p.longitude, p.latitude)
-        location_names = geolocator.reverse(point, exactly_one=True, addressdetails=False, zoom=17, language='en'
+        location_names = geolocator.reverse(point, exactly_one=True, addressdetails=False, zoom=15, language='en'
         , timeout=10)
         if not location_names:
             return []
 
         print(f"locations: {location_names}")
-        return  location_names
+        return location_names
 
     except Exception as e:
         logger.error(f"Error in reverse geocoding: {str(e)}")
