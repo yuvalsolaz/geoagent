@@ -67,10 +67,10 @@ def reverse_geocoding(query):
         location_names = geolocator.reverse(point, exactly_one=True, addressdetails=False, zoom=15, language='en'
         , timeout=10)
         if not location_names:
-            return []
+            return ''
 
         print(f"locations: {location_names}")
-        return location_names
+        return location_names.raw['name']
 
     except Exception as e:
         logger.error(f"Error in reverse geocoding: {str(e)}")

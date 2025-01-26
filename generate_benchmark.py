@@ -1,5 +1,7 @@
 from models.generate_query_agent import GenerateQueryAgent
 
+def generate_from_Locations_table():
+    pass
 
 def main():
     agent = GenerateQueryAgent()

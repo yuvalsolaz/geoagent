@@ -36,32 +36,23 @@ Workflow:
     - Return "Invalid location coordinates' as Final Answer  
 
 Critical Rules:
-1. Construct geographic query:
 
-2. Query Construction:
-   - Never write SQL manually
-   - Use tool outputs exactly as received
-   - Each processed location geography will be stored in locations_store table in the format locations_store.<location>
-   - Multiple location queries will use the appropriate locations_store entry for each location
-
-3. Results Handling:
+1. Results Handling:
    - Include all returned information and the last thought
-   - In case of no results founds or in geocoding errors (no geometries were found) include all error information and the last thought
+   - In case of no results founds or in reverse geocoding errors include all information in the last thought
    - Keep formatting simple and clear
-   - In case of errors include all error information and the last thought
    - Prefix the results with "Final Answer"
 
-4. Tool Usage:
+2. Tool Usage:
    - Execute one tool at a time
    - Wait for each tool's response
    - Use exact outputs as inputs for next tool
    - Do not modify tool outputs
-   - Each location processed location will be available in the locations_store table for use in the SQL queries 
 
 When Providing Final Answer:
-- Include all information from Execute SQL Query
-- Format response clearly and simply
-- Show complete information for lists and details
+   - Include all information from Generate Geo Query
+   - Format response clearly and simply
+   - Show complete information for lists and details
 """
 
 

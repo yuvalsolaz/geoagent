@@ -3,8 +3,11 @@ You are a GIS expert.
 Your task is to construct a free text geographic query to fetch relevant data about change detections based 
 on time and geographical features 
 Follow these steps to construct the query, applying logical reasoning at each step:
-Your query should include combination of geographic conditions, temporal conditions location classification and open 
-area conditions. In the geographic conditions use distance relations and cardinal directions.
+Your query should include combination of geographic conditions, temporal conditions location class and 
+open area conditions. 
+For location class use only classes from the following available classes:
+'Highway' 'Airport' 'Residential' 'Industrial' or 'Other'. 
+In the geographic conditions use distance relations and cardinal directions.
 
 Below are examples of Geographic queries with various scenarios:
 
