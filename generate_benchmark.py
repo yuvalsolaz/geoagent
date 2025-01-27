@@ -1,5 +1,6 @@
 import pandas as pd
-
+from shapely.geometry import shape
+from shapely import wkt
 from models.generate_query_agent import GenerateQueryAgent
 from utils.postgres_handler import PostgresHandler
 from config import SCHEMA_NAME, TABLE_NAME
@@ -48,10 +49,6 @@ def load_Locations(schema, table):
         return None
 
 
-from shapely.geometry import shape
-from shapely import wkt
-
-
 def generate(df):
     agent = GenerateQueryAgent()
 
@@ -61,8 +58,9 @@ def generate(df):
         input = f'{c.x} {c.y} {date.month}:{date.year}'
         return agent.process_input(input)
 
-    df['query'] = df[:10].apply(generate_query, axis=1)
+    df['query'] = df[:200].apply(generate_query, axis=1)
     return df
+
 
 if __name__ == "__main__":
     # main_chat()
