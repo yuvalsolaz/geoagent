@@ -16,7 +16,8 @@ open area conditions.
 For changed classes use class from the following available classes:
 'Highway' 'Airport' 'Residential' 'Industrial' or 'Other'. 
 In the geographic conditions use distance relations and cardinal directions.
-
+Do not add priorities inside the query like especially in this condition.
+ 
 Below are examples of Geographic queries with various scenarios:
 
 **Example 1:**
