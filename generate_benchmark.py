@@ -4,6 +4,7 @@ from models.generate_query_agent import GenerateQueryAgent
 from utils.postgres_handler import PostgresHandler
 from config import SCHEMA_NAME, TABLE_NAME
 
+
 def main_chat():
     agent = GenerateQueryAgent()
 
@@ -50,16 +51,18 @@ def load_Locations(schema, table):
 from shapely.geometry import shape
 from shapely import wkt
 
-def generate(df):
 
-    if df.empty:
-        return
+def generate(df):
     agent = GenerateQueryAgent()
-    for rec in df.iterrows():
-        c = shape(wkt.loads(rec[1]['geometry_wkt'])).centroid
-        date = rec[1]['startdate']
+
+    def generate_query(row):
+        c = shape(wkt.loads(row['geometry_wkt'])).centroid
+        date = row['startdate']
         input = f'{c.x} {c.y} {date.month}:{date.year}'
-        agent.process_input(input)
+        return agent.process_input(input)
+
+    df['query'] = df[:10].apply(generate_query, axis=1)
+    return df
 
 if __name__ == "__main__":
     # main_chat()
@@ -72,7 +75,3 @@ if __name__ == "__main__":
     output_file = f'{TABLE_NAME}_queries.csv'
     print(f'Generating queries finished, save results to {output_file}')
     df.to_csv(output_file)
-
-
-
-
