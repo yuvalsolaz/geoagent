@@ -69,7 +69,7 @@ if __name__ == "__main__":
     if df.empty:
         exit(1)
     print(f'{df.shape[0]} locations loaded. generating geo queries...')
-    generate(df)
+    df = generate(df)
     output_file = f'{TABLE_NAME}_queries.csv'
     print(f'Generating queries finished, save results to {output_file}')
     df.to_csv(output_file)
