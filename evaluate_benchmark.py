@@ -8,7 +8,7 @@ def evaluate_queries(df):
         if 'SELECT' in row.get('sql',''):
             return row['sql']
         query = row['query']
-        _input = f'return only the sql statement for the following query: {query}'
+        _input = f'return only the sql statement (even if the query returned no results) for the following query: {query}'
         return agent.process_input(_input)
 
     df['sql'] = df.apply(evaluate_query, axis=1)
