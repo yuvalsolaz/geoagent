@@ -5,9 +5,12 @@ from models.geo_agent import GeoAgent
 def evaluate_queries(df):
     agent = GeoAgent()
     def evaluate_query(row):
+        if 'SELECT' in row.get('sql',''):
+            return row['sql']
         query = row['query']
-        input = f'return only the sql statement for the following query: {query}'
-        return agent.process_input(input)
+        _input = f'return only the sql statement for the following query: {query}'
+        return agent.process_input(_input)
+
     df['sql'] = df.apply(evaluate_query, axis=1)
     return df
 
@@ -27,7 +30,7 @@ if __name__ == "__main__":
     print(f'loading {benchmark_file_name}...')
     df = load_dataset(benchmark_file_name=benchmark_file_name)
     print(f'{df.shape[0]} geo queries loaded. evaluating...')
-    df = evaluate_queries(df.loc[:5])
+    df = evaluate_queries(df)
     print('Evaluate queries finished')
     output_file = benchmark_file_name.replace('.csv', '_sql.csv')
     print(f'Evaluate queries finished, save results to {output_file}')
