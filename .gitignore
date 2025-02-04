@@ -11,5 +11,5 @@ data/
 .gradio/
 venv/
 *.csv
- notebook/.ipynb_checkpoints/*
+notebook/.ipynb_checkpoints/*
 
