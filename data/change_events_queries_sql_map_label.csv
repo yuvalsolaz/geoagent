@@ -63052,7 +63052,7 @@ AND ST_DWithin(ce.geog::geography, locations_store.""zebdine"", 10000);
 
         
 &lt;/script&gt;
-&lt;/html&gt;"" style=""position:absolute;width:100%;height:100%;left:0;top:0;border:none !important;"" allowfullscreen webkitallowfullscreen mozallowfullscreen></iframe></div></div>",
+&lt;/html&gt;"" style=""position:absolute;width:100%;height:100%;left:0;top:0;border:none !important;"" allowfullscreen webkitallowfullscreen mozallowfullscreen></iframe></div></div>",true
 197,197,197,197,197,detectionsWithParams.fid-1231113e_193498dfb0e_ca4,Lebanon,2023-07-19,2024-02-09,0.33,False,26.9849765964701,2024-11-14,0.82,6.83333333333333,010300000001000000050000007DC5BF74FFBA41400394861A85B340400481DFD025BC41400394861A85B340400481DFD025BC41407A67DDD47AB440407DC5BF74FFBA41407A67DDD47AB440407DC5BF74FFBA41400394861A85B34040,Other,2024-02-09,0103000020E610000001000000050000007DC5BF74FFBA41400394861A85B340400481DFD025BC41400394861A85B340400481DFD025BC41407A67DDD47AB440407DC5BF74FFBA41407A67DDD47AB440407DC5BF74FFBA41400394861A85B34040,"POLYGON((35.4609209 33.4024995,35.46990405 33.4024995,35.46990405 33.40999852,35.4609209 33.40999852,35.4609209 33.4024995))",Identify new industrial areas within open spaces within 5 kilometers north of Habboush that have emerged in the last 6 months.,"```sql
 SELECT ce.id, ce.class, ce.region, ce.startdate, ce.enddate, ce.buildfromzero, ce.confidence, ST_AsText(ce.geog) AS geometry_wkt 
 FROM change_detection.change_events ce, locations_store 
@@ -63231,7 +63231,7 @@ AND ST_YMin(Box2d(ce.geog::geometry)) > ST_YMax(box2d(locations_store.""habboush
 
         
 &lt;/script&gt;
-&lt;/html&gt;"" style=""position:absolute;width:100%;height:100%;left:0;top:0;border:none !important;"" allowfullscreen webkitallowfullscreen mozallowfullscreen></iframe></div></div>",
+&lt;/html&gt;"" style=""position:absolute;width:100%;height:100%;left:0;top:0;border:none !important;"" allowfullscreen webkitallowfullscreen mozallowfullscreen></iframe></div></div>",true
 198,198,198,198,198,detectionsWithParams.fid-1231113e_193498dfb0e_ca5,Lebanon,2023-07-29,2024-09-11,0.33,False,34.9038517883798,2024-11-14,0.82,13.6666666666667,010300000001000000050000007DC5BF74FFBA414099AE925532BB40400481DFD025BC414099AE925532BB40400481DFD025BC4140F28A75E427BC40407DC5BF74FFBA4140F28A75E427BC40407DC5BF74FFBA414099AE925532BB4040,Industrial,2024-09-11,0103000020E610000001000000050000007DC5BF74FFBA414099AE925532BB40400481DFD025BC414099AE925532BB40400481DFD025BC4140F28A75E427BC40407DC5BF74FFBA4140F28A75E427BC40407DC5BF74FFBA414099AE925532BB4040,"POLYGON((35.4609209 33.46247358,35.46990405 33.46247358,35.46990405 33.46996742,35.4609209 33.46996742,35.4609209 33.46247358))",What open areas have been developed or converted into new built-up areas around Sarba?,The SQL query executed successfully but returned no results. There are no open areas that have been developed or converted into new built-up areas around Sarba according to the current data.,"<div style=""width:100%;""><div style=""position:relative;width:100%;height:0;padding-bottom:60%;""><span style=""color:#565656"">Make this Notebook Trusted to load map: File -> Trust Notebook</span><iframe srcdoc=""&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
@@ -63402,7 +63402,7 @@ AND ST_YMin(Box2d(ce.geog::geometry)) > ST_YMax(box2d(locations_store.""habboush
 
         
 &lt;/script&gt;
-&lt;/html&gt;"" style=""position:absolute;width:100%;height:100%;left:0;top:0;border:none !important;"" allowfullscreen webkitallowfullscreen mozallowfullscreen></iframe></div></div>",
+&lt;/html&gt;"" style=""position:absolute;width:100%;height:100%;left:0;top:0;border:none !important;"" allowfullscreen webkitallowfullscreen mozallowfullscreen></iframe></div></div>",na
 199,199,199,199,199,detectionsWithParams.fid-1231113e_193498dfb0e_ca6,Lebanon,2023-09-22,2024-09-21,0.33,False,34.4869084905273,2024-11-14,0.82,12.1666666666667,010300000001000000050000007DC5BF74FFBA414054B7E5E9FDBF40400481DFD025BC414054B7E5E9FDBF40400481DFD025BC4140D7BA9A5DF3C040407DC5BF74FFBA4140D7BA9A5DF3C040407DC5BF74FFBA414054B7E5E9FDBF4040,Industrial,2024-09-21,0103000020E610000001000000050000007DC5BF74FFBA414054B7E5E9FDBF40400481DFD025BC414054B7E5E9FDBF40400481DFD025BC4140D7BA9A5DF3C040407DC5BF74FFBA4140D7BA9A5DF3C040407DC5BF74FFBA414054B7E5E9FDBF4040,"POLYGON((35.4609209 33.49993633,35.46990405 33.49993633,35.46990405 33.50742693,35.4609209 33.50742693,35.4609209 33.49993633))",Identify changes in the road network extending near Kafr Maliki.,"The SQL statement has been successfully constructed and executed, returning 21 results related to changes in the road network near Kafr Maliki.","<div style=""width:100%;""><div style=""position:relative;width:100%;height:0;padding-bottom:60%;""><span style=""color:#565656"">Make this Notebook Trusted to load map: File -> Trust Notebook</span><iframe srcdoc=""&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
@@ -64854,4 +64854,4 @@ AND ST_YMin(Box2d(ce.geog::geometry)) > ST_YMax(box2d(locations_store.""habboush
 
         
 &lt;/script&gt;
-&lt;/html&gt;"" style=""position:absolute;width:100%;height:100%;left:0;top:0;border:none !important;"" allowfullscreen webkitallowfullscreen mozallowfullscreen></iframe></div></div>",
+&lt;/html&gt;"" style=""position:absolute;width:100%;height:100%;left:0;top:0;border:none !important;"" allowfullscreen webkitallowfullscreen mozallowfullscreen></iframe></div></div>",true
