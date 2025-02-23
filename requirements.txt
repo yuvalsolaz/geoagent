@@ -14,5 +14,6 @@ shapely
 geoalchemy2
 python-dotenv
 langchain-openai==0.1.23
+langchain-google-genai
 unidecode
 gradio

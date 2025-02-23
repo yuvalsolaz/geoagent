@@ -31,7 +31,7 @@ class GeoStateManager:
     def _normalize_key(self, location: str) -> str:
         if '|type:' in location:
             location = location.split('|type:', 1)[0].strip()
-        normalized = re.sub(r'[^a-zA-Z0-9א-ת]', '_', location.lower())
+        normalized = re.sub(r'[^a-zA-Z0-9א-ת\u0600-\u06FF\u0750-\u077F\u08A0-\u08FF]', '_', location.lower())
         normalized = re.sub(r'_+', '_', normalized)
         return normalized.strip('_')
 

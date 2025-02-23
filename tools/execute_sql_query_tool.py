@@ -1,9 +1,6 @@
 import json
-import psycopg2
 import geopandas as gpd
-from psycopg2.extras import RealDictCursor
 from shapely import wkt
-from shapely.geometry import GeometryCollection
 from config import SIMPLIFY_SHAPE_TOLERANCE
 from utils.geo_state_manager import GeoStateManager
 from utils import PostgresHandler

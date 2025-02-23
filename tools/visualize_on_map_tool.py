@@ -54,7 +54,7 @@ def create_map():
     center_lon = (bounds[0] + bounds[2]) / 2
 
     # Create a folium map object.
-    m = folium.Map(location=[center_lat, center_lon], zoom_start=10, height=500)
+    m = folium.Map(location=[center_lat, center_lon], control_scale=True, zoom_start=10, height=500)
 
     # Add custom basemaps
     for basemap in basemaps.values():
@@ -120,4 +120,5 @@ def create_map():
     # Add a layer control panel to the map.
 
     m.add_child(folium.LayerControl())
+
     return m
